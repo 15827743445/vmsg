@@ -6,10 +6,15 @@ import router from './router'
 
 import ElementUI from "element-ui"
 
+import Http from '@/plugins/http'
+import "@/assets/base.css"
+
 // 将element完整引入（也可以按需引入）
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
+
+Vue.use(Http)
 
 Vue.config.productionTip = false
 
