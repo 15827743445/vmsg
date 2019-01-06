@@ -7,6 +7,8 @@ import router from './router'
 import ElementUI from "element-ui"
 
 import Http from '@/plugins/http'
+
+import moment from 'moment'
 import "@/assets/base.css"
 
 // 将element完整引入（也可以按需引入）
@@ -18,6 +20,10 @@ Vue.use(Http)
 
 Vue.config.productionTip = false
 
+
+Vue.filter('fmtDate',(v) => {
+  return moment(v).format('YYYY-MM-DD');
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
